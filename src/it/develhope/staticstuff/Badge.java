@@ -25,14 +25,14 @@ public class Badge {
      * @return a String containing name and surname of the employee between two codes
      */
     private String generateBadgeIdCode(){
-        return "XYZ" + this.employee.name + this.employee.surname + "ZYX";
+        return "XYZ" + employee.name + employee.surname + "ZYX";
     }
     /**
      * Method that prints all the employee details and the relative badgeNumber
      */
     public void showBadgeDetails(){
         System.out.println("Total number of employees tracked by the badges: "+ totalNumberOfEmployees);
-        System.out.println("Employee details: " + this.employee.getEmployeeDetails());
+        System.out.println("Employee details: " + employee.getEmployeeDetails());
         System.out.println("Badge Id Code: " + this.badgeIdCode);
 
     }
@@ -43,7 +43,7 @@ public class Badge {
      */
     public Badge(Employee employeeThatNeedsBadge) {
         keepTrackOfEmployeesNumber();
-        this.employee = employeeThatNeedsBadge;
+        employee = employeeThatNeedsBadge;
         this.badgeIdCode = generateBadgeIdCode();
     }
 
